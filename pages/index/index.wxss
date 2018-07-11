@@ -1,0 +1,76 @@
+/**index.wxss**/
+page{
+  height: 100%;
+  width: 100%;
+}
+.outcontainer{
+  height: 100%;
+  width: 100%;
+}
+.wx-swiper{
+  width: 750rpx;
+  height: 480rpx;
+}
+.slide-image{
+  height: 100%;
+  width: 100%;
+}
+.special{
+  width: 100%;
+  padding: 6rpx;
+  display: flex;
+}
+.sleft{
+  width: 49%;
+  font-size: 0px;
+  padding-right: 4rpx;
+}
+.sleft image{
+  width: 100%;
+}
+.sright{
+  width: 49%;
+  font-size: 0px;
+}
+.sright image{
+  width: 100%;
+}
+.newgoodstitle{
+  text-align: center;
+  color: #ff9801;
+  padding: 10rpx 0;
+}
+.goodslist{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.goodsitem{
+  width:49%;
+  font-size: 0px;
+  padding-bottom: 5rpx;
+}
+.goodsimg image{
+  width: 100%;
+}
+.goodsinfo{
+  background-color: #fff2e1;
+  padding: 10rpx 20rpx;
+}
+.goodsprice{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.goodstitle{
+  font-size: 16px;
+  color: #5e5e56;
+}
+.goodsprice text {
+  font-size: 16px;
+  color: #ff9801;
+}
+.goodsprice image{
+  width: 20px;
+}

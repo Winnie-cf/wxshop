@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class='outcontainer'>
+<!-- 轮播图 -->
+<swiper class='wx-swiper' indicator-color="#fff" indicator-active-color="#ff9801" indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 专题区 -->
+<view class='special'>
+    <view class='sleft'> <image mode='widthFix' src='/img/index/etz.png'></image> </view>
+    <view class='sright'>
+      <image class='nrz' mode='widthFix' src='/img/index/nrz.png'></image>
+      <image mode='widthFix' src='/img/index/nanrz.png'></image>
+    </view>
+  </view>
+  <!-- 最新商品区 -->
+  <view class='newgoodstitle'>✲✲ 最新商品 ✲✲</view>
+    <view class='goodslist'>
+
+    <view class='goodsitem' wx:for="{{ goodslist }}">
+      <view class='goodsimg'> <image mode='widthFix' src='{{ item.thumb }}'></image> </view>
+      <view class='goodsinfo'>
+        <text class='goodstitle'>{{ item.title }}</text>
+        <view class='goodsprice'>
+          <text>￥{{ item.price }}</text>
+          <image wx:if="{{ item.collect == 0 }}" mode='widthFix' src='/img/index/heart.png'></image>
+          <image wx:if="{{ item.collect == 1 }}" mode='widthFix' src='/img/index/heartcolored.png'></image>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

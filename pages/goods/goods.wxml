@@ -1,0 +1,51 @@
+<!--pages/goods/goods.wxml-->
+<view class='outer'>
+ <!-- <scroll-view scroll-y> -->
+  <swiper class='swiper' indicator-color="#fff" indicator-active-color="#ff9801" indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='goodsinfo'>
+    <view class='goodstitle'>商品描述标签测试测试测试测试测试测试</view>
+    <view class='goodsale'>
+      <view class='goodsale-left'>
+        <text class='cprice'>￥12</text>
+        <text class='oprice'>￥21</text>
+        <text class='snum'>销量： 23 件</text>
+      </view>
+      <view class='goodsale-right'>
+        <view class='goodsnum'>
+              <text class='minus {{minusStatus}}' bindtap='bindMinus'>-</text>
+              <input type='text' bindchange='bindmanual' value='{{num}}'></input>
+              <text class='plus' bindtap='bindPlus'>+</text>
+        </view>
+      </view>
+    </view>
+  </view> 
+  <view class='swipertab'>
+      <view class="tabitem {{currentab==0 ? 'active' : ''}}" data-current="0" bindtap='clicktab'>详情</view>
+      <view class="tabitem {{currentab==1 ? 'active' : ''}}" data-current="1" bindtap='clicktab'>售后</view>
+  </view>
+      <swiper style="height:640px;" class='detailswiper' current='{{ currentab }}' duration='250'>
+        <swiper-item><image class='detail' mode='widthFix' src="/img/index/g1.png"></image></swiper-item>
+        <swiper-item> <view>tab2</view> </swiper-item>
+     </swiper>
+      <view class='buy'>
+        <view class='collect'>
+          <image src='/img/cate/index.png'></image>
+          <view>首页</view>
+        </view>
+        <view class='collect'>
+          <!-- <image src='/img/cate/index.png'></image> -->
+          <image src='/img/index/heart.png'></image>
+          <view>收藏</view>
+        </view>
+        <view class='cart cbg'>加入购物车</view>
+        <view class='cart nbg'>立即购买</view>
+      </view>
+   <!-- </scroll-view> -->
+</view>

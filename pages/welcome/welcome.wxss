@@ -1,0 +1,14 @@
+/* pages/welcome/welcome.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+.outer , .outer navigator , .outer navigator image{
+  height: 100%;
+  width: 100%;
+}
+/* .outer navigator{
+  height: 100%;
+  width: 100%;
+} */

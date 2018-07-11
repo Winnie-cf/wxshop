@@ -1,0 +1,34 @@
+<!--pages/goodslist/goodslist.wxml-->
+<view class='outer'>
+  <scroll-view class='nav' scroll-x>
+      <navigator url='#'>短裤</navigator>
+      <navigator class='current' url='#'>长裤</navigator>
+      <navigator url='#'>哈伦裤</navigator>
+      <navigator url='#'>裙裤</navigator>
+      <navigator url='#'>半身裙</navigator>
+      <navigator url='#'>短裙</navigator>
+      <navigator url='#'>长裙</navigator>
+      <navigator url='#'>雪纺裙</navigator>
+      <navigator url='#'>针织裙</navigator>
+      <navigator url='#'>休闲裙</navigator>
+      <navigator url='#'>牛仔裙</navigator>
+  </scroll-view>
+  <scroll-view scroll-y style="height:1160rpx">
+    <view class='newgoodstitle'>✲✲ 最新商品 ✲✲</view>
+      <view class='goodslist'>
+
+      <view class='goodsitem' wx:for="{{ goodslist }}">
+        <view class='goodsimg'> <image mode='widthFix' src='{{ item.thumb }}'></image> </view>
+        <view class='goodsinfo'>
+          <text class='goodstitle'>{{ item.title }}</text>
+          <view class='goodsprice'>
+            <text>￥{{ item.price }}</text>
+            <image wx:if="{{ item.collect == 0 }}" mode='widthFix' src='/img/index/heart.png'></image>
+            <image wx:if="{{ item.collect == 1 }}" mode='widthFix' src='/img/index/heartcolored.png'></image>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </scroll-view>
+</view>

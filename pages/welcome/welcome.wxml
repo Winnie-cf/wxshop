@@ -1,0 +1,5 @@
+<!--pages/welcome/welcome.wxml-->
+<view class='outer'>
+<navigator url='/pages/index/index' open-type='switchTab'><image class='img' src='/img/index/welcome.jpg'></image></navigator>
+<view hidden='hidden'><text>{{time}}</text></view>
+</view>

@@ -1,0 +1,55 @@
+/* pages/cate/cate.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+.outer{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.left{
+  width: 18%;
+  height: 100%;
+  border-right:2rpx solid #ccc;
+  /* background-color: #ccc; */
+}
+.navitem{
+  text-align: center;
+  padding: 30rpx 0;
+  font-size: 32rpx;
+}
+.current{
+  border-left:3px solid #ff9801;
+  color: #ff9801;
+}
+.right{
+  width: 80%;
+  padding: 20rpx;
+}
+.banner image{
+  width: 100%;
+}
+.title{
+  text-align: center;
+  color: #ff9801;
+  padding: 20rpx;
+  font-size: 14px;
+}
+.catelist{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cateitem{
+  width: 30%;
+  margin-bottom: 20rpx;
+}
+.cateitem image{
+  width: 100%;
+}
+.catename{
+  font-size: 28rpx;
+  text-align: center;
+}

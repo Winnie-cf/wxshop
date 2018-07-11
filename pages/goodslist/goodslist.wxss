@@ -1,0 +1,59 @@
+/* pages/goodslist/goodslist.wxss */
+.outer{
+  width: 100%;
+  height: 100%;
+}
+.newgoodstitle{
+  text-align: center;
+  color: #ff9801;
+  padding: 10rpx 0;
+}
+.goodslist{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.goodsitem{
+  width:49%;
+  font-size: 0px;
+  padding-bottom: 5rpx;
+}
+.goodsimg image{
+  width: 100%;
+}
+.goodsinfo{
+  background-color: #fff2e1;
+  padding: 10rpx 20rpx;
+}
+.goodsprice{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.goodstitle{
+  font-size: 16px;
+  color: #5e5e56;
+}
+.goodsprice text {
+  font-size: 16px;
+  color: #ff9801;
+}
+.goodsprice image{
+  width: 20px;
+}
+.nav{
+  width: 100%;
+  white-space: nowrap;
+  border-bottom: 1px solid #eee;
+}
+.nav navigator{
+  display: inline-block;
+  padding:14rpx 16rpx;
+  font-size: 16px;
+  color: #666;
+}
+.current{
+  color: #ff9801;
+  border-bottom: 2px solid #ff9801;
+}
