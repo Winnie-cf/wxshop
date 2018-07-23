@@ -25,7 +25,7 @@ class Cate extends Controller
             if($_FILES['thumb']['tmp_name']){
                  $file = request()->file('thumb');
                  if($file){
-                    $info = $file->move(ROOT_PATH . 'public' . DS . 'static' . DS . 'uploads');
+                    $info = $file->move(ROOT_PATH . 'public' . DS . 'static' . DS . 'uploads' . DS . 'cates');
                     if($info){
                         // 输出 20160820/42a79759f284b767dfcb2a0197904287.jpg
                          $thumbSrc=date("Ymd").'/'.$info->getFilename();
@@ -59,7 +59,7 @@ class Cate extends Controller
             if($_FILES['thumb']['tmp_name']){
                  $file = request()->file('thumb');
                  if($file){
-                    $info = $file->move(ROOT_PATH . 'public' . DS . 'static' . DS . 'uploads');
+                    $info = $file->move(ROOT_PATH . 'public' . DS . 'static' . DS . 'uploads' . DS . 'cates');
                     if($info){
                         // 输出 20160820/42a79759f284b767dfcb2a0197904287.jpg
                          $thumbSrc=date("Ymd").'/'.$info->getFilename();
@@ -67,7 +67,7 @@ class Cate extends Controller
                          // 删除原图
                          $ocates=db('cate')->field('thumb')->find($id);
                          if($ocates['thumb']){
-                            $oImgSrc=UPLOADS.'/'.$ocates['thumb'];
+                            $oImgSrc=UPLOADS.'/cates/'.$ocates['thumb'];
                             if(file_exists($oImgSrc)){
                                 @unlink($oImgSrc);
                             }
@@ -109,7 +109,7 @@ class Cate extends Controller
         $cate=db('cate');
         foreach ($sonIds as $k => $v) {
             $cates=$cate->field('thumb')->find($v);
-            $thumbSrc=UPLOADS.'/'.$cates['thumb'];
+            $thumbSrc=UPLOADS.'/cates/'.$cates['thumb'];
             if(file_exists($thumbSrc)){
                 @unlink($thumbSrc);
             }

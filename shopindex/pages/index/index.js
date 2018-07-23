@@ -57,7 +57,7 @@ Page({
     var url = app.globalData.domain + 'index/getBanners';
     var params = {};
     util.wxRequest(url, params, data => {
-      console.log(data);
+      // console.log(data);
       this.setData({
         imgUrls: data
       })

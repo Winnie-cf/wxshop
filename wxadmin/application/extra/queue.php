@@ -11,6 +11,6 @@
 
 return [
     'connector' => 'Sync',
-    'baseurl'=>'http://127.0.0.1/wxadmin/public/static/uploads/banners/',//首页图地址
-    'photourl'=>'http://127.0.0.1/wxadmin/public/static/uploads/photo/'
+    'baseurl'=>'http://127.0.0.1/wxadmin/public/static/uploads/',//首页图地址
+    'photourl'=>'http://127.0.0.1/wxadmin/public/static/uploads/photo/',//
 ];

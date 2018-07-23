@@ -2,46 +2,20 @@
 <view class='outer'>
    <view class='left'>
    <block wx:for="{{topCate}}">
-       <view bindtap="changeid" data-id="{{item.id}}" wx:if="{{ item.id === startCateId }}" class='navitem current'>女装</view>
-       <view bindtap="changeid" data-id="{{item.id}}" wx:else class='navitem'>女装</view>
+       <view bindtap="changeid" data-id="{{item.id}}" wx:if="{{ item.id === startCateId }}" class='navitem current'>{{item.cate_name}}</view>
+       <view bindtap="changeid" data-id="{{item.id}}" wx:else class='navitem'>{{item.cate_name}}</view>
        </block>
    </view>
    <view class='right'>
-   <view class='banner'><image mode='widthFix' src='/img/cate/banner1.png'></image></view>
-   <view class='title'>—— 女装 ——</view>
+   <view class='banner'><image mode='widthFix' src='{{cates.thumb}}'></image></view>
+   <view class='title'>—— {{cates.cate_name}} ——</view>
    <view class='catelist'>
+    <block wx:for="{{sonCates}}">
       <view class='cateitem'>
-          <view class='cateimg'><image mode='widthFix' src='/img/cate/kz.jpg'></image></view>
-          <view class='catename'>裤装</view>
+          <view class='cateimg'><image bindtap='goodslist' data-cid="{{item.id}}" mode='widthFix' src='{{item.thumb}}'></image></view>
+          <view class='catename'>{{item.cate_name}}</view>
       </view>
-      <view class='cateitem'>
-          <view class='cateimg'><image mode='widthFix' src='/img/cate/ms.jpg'></image></view>
-          <view class='catename'>毛衫</view>
-      </view>
-      <view class='cateitem'>
-          <view class='cateimg'><image mode='widthFix' src='/img/cate/qz.jpg'></image></view>
-          <view class='catename'>裙装</view>
-      </view>
-      <view class='cateitem'>
-          <view class='cateimg'><image mode='widthFix' src='/img/cate/tz.jpg'></image></view>
-          <view class='catename'>套装</view>
-      </view>
-      <view class='cateitem'>
-          <view class='cateimg'><image mode='widthFix' src='/img/cate/wt.jpg'></image></view>
-          <view class='catename'>外套</view>
-      </view>
-      <view class='cateitem'>
-          <view class='cateimg'><image mode='widthFix' src='/img/cate/ts.jpg'></image></view>
-          <view class='catename'>特色</view>
-      </view>
-      <view class='cateitem'>
-          <view class='cateimg'><image mode='widthFix' src='/img/cate/ts.jpg'></image></view>
-          <view class='catename'>特色</view>
-      </view>
-      <view class='cateitem'>
-          <view class='cateimg'><image mode='widthFix' src='/img/cate/ts.jpg'></image></view>
-          <view class='catename'>特色</view>
-      </view>
+    </block>
    </view>
    </view>
 </view>
