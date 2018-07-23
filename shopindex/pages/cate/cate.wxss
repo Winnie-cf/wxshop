@@ -40,11 +40,13 @@ page{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+   /* justify-content: space-between;  */
+  float: left;
 }
 .cateitem{
   width: 30%;
-  margin-bottom: 20rpx;
+  margin: 0rpx 10rpx 0rpx;
+  
 }
 .cateitem image{
   width: 100%;

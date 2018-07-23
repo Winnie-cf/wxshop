@@ -34,6 +34,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    domain: 'http://127.0.0.1/wxadmin/index.php/api/',
+    userInfo: null,
+    openid: '',
+    login: false
   }
 })

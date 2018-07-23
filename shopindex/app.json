@@ -1,9 +1,9 @@
 {
   "pages":[
-    "pages/goods/goods",
-    "pages/goodslist/goodslist",
-    "pages/cate/cate",
     "pages/index/index",
+    "pages/goodslist/goodslist",
+    "pages/goods/goods",
+    "pages/cate/cate",
     "pages/welcome/welcome",
     "pages/logs/logs"
     

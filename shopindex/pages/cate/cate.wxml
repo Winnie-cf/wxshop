@@ -1,11 +1,10 @@
 <!--pages/cate/cate.wxml-->
 <view class='outer'>
    <view class='left'>
-       <view class='navitem '>女装</view>
-       <view class='navitem current'>女装</view>
-       <view class='navitem'>女装</view>
-       <view class='navitem'>女装</view>
-       <view class='navitem'>女装</view>
+   <block wx:for="{{topCate}}">
+       <view bindtap="changeid" data-id="{{item.id}}" wx:if="{{ item.id === startCateId }}" class='navitem current'>女装</view>
+       <view bindtap="changeid" data-id="{{item.id}}" wx:else class='navitem'>女装</view>
+       </block>
    </view>
    <view class='right'>
    <view class='banner'><image mode='widthFix' src='/img/cate/banner1.png'></image></view>
@@ -30,6 +29,10 @@
       <view class='cateitem'>
           <view class='cateimg'><image mode='widthFix' src='/img/cate/wt.jpg'></image></view>
           <view class='catename'>外套</view>
+      </view>
+      <view class='cateitem'>
+          <view class='cateimg'><image mode='widthFix' src='/img/cate/ts.jpg'></image></view>
+          <view class='catename'>特色</view>
       </view>
       <view class='cateitem'>
           <view class='cateimg'><image mode='widthFix' src='/img/cate/ts.jpg'></image></view>
